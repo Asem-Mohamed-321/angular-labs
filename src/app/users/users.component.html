@@ -1,0 +1,31 @@
+<!-- <p>users works!</p> -->
+<!-- <div class="">
+    @for(user of users; track user["id"]){
+        <div class="border-2 border-double my-5 mx-3 p-3">
+            <p>{{user["name"]}}</p>
+            <p>{{user["email"]}}</p>
+            <p>{{user["username"]}}</p>
+        </div>
+    }
+</div> -->
+<div class=" my-5 mx-20 p-3">
+<ul class="list bg-base-100 rounded-box shadow-md">
+
+    <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">List of the users</li>
+    <!-- @for(user of users; track user["id"]){ -->
+    
+        <!-- <li class="list-row">
+            <div class="text-4xl font-thin opacity-30 tabular-nums">{{user["id"]}}</div>
+            <div class="list-col-grow">
+                <div>{{user["name"]}}</div>
+                <div class="ml-5 text-xs uppercase font-semibold opacity-60">Age : {{user["Age"]}}</div>
+                <div class="ml-5 text-xs uppercase font-semibold opacity-60">E-mail : {{user["email"]}}</div>
+            </div>
+        </li> -->
+        <li *ngFor="let user of users">
+            <app-user-item [user]="user"></app-user-item>
+        </li>
+        
+    <!-- } -->
+</ul>
+</div>
